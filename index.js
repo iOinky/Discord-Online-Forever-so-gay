@@ -1,5 +1,4 @@
 const Eris = require('eris');
-require('dotenv').config(); // Load environment variables from .env file
 
 const bot = new Eris(process.env.BOT_TOKEN, {
     ws: { intents: ['GUILDS', 'GUILD_MESSAGES'] } // Set intents directly

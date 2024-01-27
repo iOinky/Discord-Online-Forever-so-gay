@@ -1,9 +1,8 @@
 const Eris = require('eris');
-const { Client, GatewayIntentBits } = require('discord.js'); // Used for intents
 require('dotenv').config(); // Load environment variables from .env file
 
 const bot = new Eris(process.env.BOT_TOKEN, {
-    intents: Client.Intents.FLAGS.GUILDS | Client.Intents.FLAGS.GUILD_MESSAGES
+    ws: { intents: ['GUILDS', 'GUILD_MESSAGES'] } // Set intents directly
 });
 
 const targetChannelId = '1200747293033382051'; // Replace with the actual channel ID
